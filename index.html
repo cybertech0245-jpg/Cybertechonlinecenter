@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Cyber Tech Online Center | Konda Mallepally</title>
 
 <style>
@@ -29,7 +30,6 @@ header{
 header h1{
   font-size:34px;
   font-weight:800;
-  text-transform:uppercase;
 }
 
 header p{
@@ -126,6 +126,8 @@ section{
   margin-bottom:22px;
 }
 
+/* BANNER SLIDER */
+
 .slider{
   position:relative;
   overflow:hidden;
@@ -136,44 +138,28 @@ section{
 
 .slide{
   display:none;
-  padding:45px 20px;
-  text-align:center;
-  min-height:240px;
+  width:100%;
 }
 
 .slide.active{
   display:block;
 }
 
-.slide h3{
-  font-size:34px;
-  color:#063970;
-  margin-bottom:10px;
+.image-slide{
+  padding:0;
+  min-height:0;
+  background:white;
 }
 
-.slide p{
-  font-size:19px;
+.image-slide img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:550px;
+  object-fit:cover;
 }
 
-.slide:nth-child(1){
-  background:linear-gradient(135deg,#fff3cd,#ffffff);
-}
-
-.slide:nth-child(2){
-  background:linear-gradient(135deg,#d9f7e8,#ffffff);
-}
-
-.slide:nth-child(3){
-  background:linear-gradient(135deg,#dff2ff,#ffffff);
-}
-
-.slide:nth-child(4){
-  background:linear-gradient(135deg,#ffe4e6,#ffffff);
-}
-
-.slide:nth-child(5){
-  background:linear-gradient(135deg,#eee4ff,#ffffff);
-}
+/* DOTS */
 
 .dots{
   text-align:center;
@@ -187,11 +173,14 @@ section{
   margin:4px;
   background:#bbb;
   border-radius:50%;
+  cursor:pointer;
 }
 
 .dot.active{
   background:#087fbd;
 }
+
+/* SERVICE CARDS */
 
 .cards{
   display:grid;
@@ -222,6 +211,8 @@ section{
   font-size:15px;
 }
 
+/* BHU BHARATHI */
+
 .bhu{
   background:linear-gradient(135deg,#0d7a3b,#16a05d);
   color:white;
@@ -240,6 +231,8 @@ section{
   display:block;
   margin:8px;
 }
+
+/* AEPS */
 
 .aeps{
   background:linear-gradient(135deg,#fff0d6,#ffffff);
@@ -264,6 +257,8 @@ section{
   font-size:14px;
 }
 
+/* NOTIFICATION */
+
 .notice{
   background:#fff;
   border-left:6px solid #e31b23;
@@ -276,6 +271,8 @@ section{
   color:#e31b23;
   margin-bottom:8px;
 }
+
+/* CONTACT */
 
 .contact{
   background:#063970;
@@ -294,6 +291,8 @@ section{
   margin:5px 0;
 }
 
+/* FOOTER */
+
 footer{
   background:#031d35;
   color:white;
@@ -302,7 +301,10 @@ footer{
   margin-top:20px;
 }
 
+/* MOBILE */
+
 @media(max-width:600px){
+
   header h1{
     font-size:25px;
   }
@@ -315,12 +317,12 @@ footer{
     font-size:38px;
   }
 
-  .slide h3{
-    font-size:27px;
-  }
-
   .section-title{
     font-size:25px;
+  }
+
+  .image-slide img{
+    max-height:400px;
   }
 }
 </style>
@@ -329,272 +331,566 @@ footer{
 <body>
 
 <header>
+
   <h1>CYBER TECH ONLINE CENTER</h1>
+
   <p>మీ అన్ని Online Services ఒకే చోట</p>
+
   <div class="top-contact">
     📞 9959172788 &nbsp; | &nbsp; 8985023028
   </div>
+
 </header>
 
+
 <nav>
+
   <a href="#home">Home</a>
+
   <a href="#services">Services</a>
+
   <a href="#bhubharathi">Bhu-Bharathi</a>
+
   <a href="#aeps">AEPS</a>
+
   <a href="#notifications">Notifications</a>
+
   <a href="#contact">Contact</a>
+
 </nav>
 
+
+<!-- HOME -->
+
 <div id="home" class="hero">
+
   <h2>Welcome to Cyber Tech Online Center</h2>
+
   <div class="highlight">XEROX</div>
+
   <p>
-    Aadhaar, PAN, Voter ID, Bhu-Bharathi, Farmer Registration,
-    AEPS, Online Applications, Printing & Digital Services
+    Aadhaar, PAN, Voter ID, Bhu-Bharathi,
+    Farmer Registration, AEPS,
+    Online Applications, Printing & Digital Services
   </p>
 
   <div class="buttons">
-    <a class="btn call" href="tel:9959172788">📞 Call Now</a>
-    <a class="btn whatsapp" href="https://wa.me/919959172788">💬 WhatsApp</a>
+
+    <a class="btn call" href="tel:9959172788">
+      📞 Call Now
+    </a>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/919959172788">
+      💬 WhatsApp
+    </a>
+
   </div>
+
 </div>
 
+
+<!-- IMAGE SLIDER -->
+
 <section>
-  <h2 class="section-title">Our Important Services</h2>
+
+  <h2 class="section-title">
+    Our Important Services
+  </h2>
 
   <div class="slider">
 
-    <div class="slide active">
-      <div style="font-size:55px;">🖨️</div>
-      <h3>XEROX & PRINTING</h3>
-      <p>Black & White Xerox • Colour Xerox • Printing • Scanning</p>
+    <div class="slide active image-slide">
+
+      <img
+        src="shop-hero-banner.png"
+        alt="Cyber Tech Online Center">
+
     </div>
 
-    <div class="slide">
-      <div style="font-size:55px;">🌾</div>
-      <h3>BHU-BHARATHI</h3>
-      <p>Registration Slot Booking & Land Related Online Services</p>
+
+    <div class="slide image-slide">
+
+      <img
+        src="shop-services-banner.png"
+        alt="Cyber Tech Online Center Services">
+
     </div>
 
-    <div class="slide">
-      <div style="font-size:55px;">🪪</div>
-      <h3>AADHAAR • PAN • VOTER</h3>
-      <p>Online Applications, Corrections & Download Assistance</p>
+
+    <div class="slide image-slide">
+
+      <img
+        src="services-photo-banner.png"
+        alt="Online Services">
+
     </div>
 
-    <div class="slide">
-      <div style="font-size:55px;">💳</div>
-      <h3>AEPS SERVICES</h3>
-      <p>Cash Withdrawal • Deposit • Balance • Mini Statement • Fund Transfer</p>
-    </div>
 
-    <div class="slide">
-      <div style="font-size:55px;">👨‍🌾</div>
-      <h3>FARMER SERVICES</h3>
-      <p>Farmer Registration • PM-Kisan • Agriculture Related Online Services</p>
+    <div class="slide image-slide">
+
+      <img
+        src="contact-banner.png"
+        alt="Contact Cyber Tech Online Center">
+
     </div>
 
   </div>
+
 
   <div class="dots">
+
     <span class="dot active"></span>
+
     <span class="dot"></span>
+
     <span class="dot"></span>
+
     <span class="dot"></span>
-    <span class="dot"></span>
+
   </div>
+
 </section>
 
+
+<!-- ONLINE SERVICES -->
+
 <section id="services">
-  <h2 class="section-title">Online Services</h2>
+
+  <h2 class="section-title">
+    Online Services
+  </h2>
+
 
   <div class="cards">
 
+
     <div class="card">
+
       <div class="icon">🪪</div>
+
       <h3>Aadhaar Services</h3>
-      <p>Aadhaar Download, Update Assistance, PVC Card Services</p>
+
+      <p>
+        Aadhaar Download, Update Assistance,
+        PVC Card Services
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">💳</div>
+
       <h3>PAN Card</h3>
-      <p>New PAN Application, Correction & Download Assistance</p>
+
+      <p>
+        New PAN Application,
+        Correction & Download Assistance
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">🗳️</div>
+
       <h3>Voter ID</h3>
-      <p>New Registration, Corrections & Online Services</p>
+
+      <p>
+        New Registration,
+        Corrections & Online Services
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">🖨️</div>
+
       <h3>XEROX & Printing</h3>
-      <p>Colour Xerox, B&W Xerox, Printing, Scanning & Documents</p>
+
+      <p>
+        Colour Xerox, B&W Xerox,
+        Printing, Scanning & Documents
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">📄</div>
+
       <h3>Lamination</h3>
-      <p>Document Lamination & ID Card Lamination</p>
+
+      <p>
+        Document Lamination
+        & ID Card Lamination
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">📚</div>
+
       <h3>Spiral Binding</h3>
-      <p>Project Reports, Documents & Book Binding</p>
+
+      <p>
+        Project Reports,
+        Documents & Book Binding
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">💻</div>
+
       <h3>Online Applications</h3>
-      <p>Government Applications, Admissions, Scholarships & Jobs</p>
+
+      <p>
+        Government Applications,
+        Admissions, Scholarships & Jobs
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <div class="icon">📱</div>
+
       <h3>Recharge & Bills</h3>
-      <p>Mobile, DTH, Electricity, Water & Other Bill Payments</p>
+
+      <p>
+        Mobile, DTH, Electricity,
+        Water & Other Bill Payments
+      </p>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- BHU BHARATHI -->
+
 <section id="bhubharathi">
+
   <div class="bhu">
-    <div style="font-size:60px;">🌾</div>
+
+    <div style="font-size:60px;">
+      🌾
+    </div>
+
     <h2>భూ-భారతి</h2>
-    <strong>Registration Slot Booking</strong>
+
+    <strong>
+      Registration Slot Booking
+    </strong>
+
     <p>
       వ్యవసాయ భూమి Registration Slot Booking,
       భూ సంబంధిత సమస్యలకు Online Assistance,
       Land Records & Survey Related Services
     </p>
 
+
     <div class="buttons">
-      <a class="btn whatsapp" href="https://wa.me/919959172788">
+
+      <a class="btn whatsapp"
+         href="https://wa.me/919959172788">
+
         💬 Enquiry on WhatsApp
+
       </a>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- AEPS -->
 
 <section id="aeps">
+
   <div class="aeps">
-    <h2 class="section-title">💳 AEPS SERVICES</h2>
-    <p>Aadhaar Enabled Payment System</p>
 
-    <div class="aeps-items">
-      <span>Cash Withdrawal</span>
-      <span>Cash Deposit</span>
-      <span>Balance Enquiry</span>
-      <span>Mini Statement</span>
-      <span>Fund Transfer</span>
-    </div>
-  </div>
-</section>
+    <h2 class="section-title">
+      💳 AEPS SERVICES
+    </h2>
 
-<section>
-  <h2 class="section-title">👨‍🌾 Farmer Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <div class="icon">🌾</div>
-      <h3>Farmer Registration</h3>
-      <p>Farmer related online registration assistance.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🌱</div>
-      <h3>PM-Kisan</h3>
-      <p>PM-Kisan related online assistance and applications.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">📑</div>
-      <h3>Land Records</h3>
-      <p>Pahani / Adangal, 1-B, ROR and other land record assistance.</p>
-    </div>
-  </div>
-</section>
-
-<section id="notifications">
-  <h2 class="section-title">📢 Latest Notifications</h2>
-
-  <div class="notice">
-    <h3>Government & Job Notifications</h3>
     <p>
-      Latest Government Notifications, Recruitment Updates,
-      TGPSC, Admissions, Scholarships, Hall Tickets and other
-      important online services are available at Cyber Tech Online Center.
+      Aadhaar Enabled Payment System
     </p>
 
-    <div class="buttons">
-      <a class="btn whatsapp" href="https://wa.me/919959172788">
-        📲 Ask for Latest Notification
-      </a>
+
+    <div class="aeps-items">
+
+      <span>Cash Withdrawal</span>
+
+      <span>Cash Deposit</span>
+
+      <span>Balance Enquiry</span>
+
+      <span>Mini Statement</span>
+
+      <span>Fund Transfer</span>
+
     </div>
+
   </div>
+
 </section>
 
-<section id="contact">
-  <div class="contact">
-    <h2>📍 Contact Cyber Tech Online Center</h2>
 
-    <p><strong>Cyber Tech Online Center</strong></p>
+<!-- FARMER SERVICES -->
+
+<section>
+
+  <h2 class="section-title">
+    👨‍🌾 Farmer Services
+  </h2>
+
+
+  <div class="cards">
+
+
+    <div class="card">
+
+      <div class="icon">🌾</div>
+
+      <h3>Farmer Registration</h3>
+
+      <p>
+        Farmer related online
+        registration assistance.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌱</div>
+
+      <h3>PM-Kisan</h3>
+
+      <p>
+        PM-Kisan related online
+        assistance and applications.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📑</div>
+
+      <h3>Land Records</h3>
+
+      <p>
+        Pahani / Adangal,
+        1-B, ROR and other land record assistance.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NOTIFICATIONS -->
+
+<section id="notifications">
+
+  <h2 class="section-title">
+    📢 Latest Notifications
+  </h2>
+
+
+  <div class="notice">
+
+    <h3>
+      Government & Job Notifications
+    </h3>
+
+    <p>
+      Latest Government Notifications,
+      Recruitment Updates, TGPSC,
+      Admissions, Scholarships,
+      Hall Tickets and other important
+      online services are available at
+      Cyber Tech Online Center.
+    </p>
+
+
+    <div class="buttons">
+
+      <a class="btn whatsapp"
+         href="https://wa.me/919959172788">
+
+        📲 Ask for Latest Notification
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>
+      📍 Contact Cyber Tech Online Center
+    </h2>
+
+
+    <p>
+      <strong>
+        Cyber Tech Online Center
+      </strong>
+    </p>
+
 
     <p>
       Opposite Konda Mallepally Bus Stop,<br>
       Palakendram Line, Hyderabad Road
     </p>
 
-    <p>📞 9959172788</p>
-    <p>📞 8985023028</p>
+
+    <p>
+      📞 9959172788
+    </p>
+
+    <p>
+      📞 8985023028
+    </p>
+
 
     <div class="buttons">
-      <a class="btn call" href="tel:9959172788">📞 Call</a>
-      <a class="btn whatsapp" href="https://wa.me/919959172788">💬 WhatsApp</a>
+
+      <a class="btn call"
+         href="tel:9959172788">
+
+        📞 Call
+
+      </a>
+
+
+      <a class="btn whatsapp"
+         href="https://wa.me/919959172788">
+
+        💬 WhatsApp
+
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Cyber Tech Online Center</p>
-  <p>All Online Services Available Here</p>
+
+  <p>
+    © 2026 Cyber Tech Online Center
+  </p>
+
+  <p>
+    All Online Services Available Here
+  </p>
+
 </footer>
 
+
+<!-- SLIDER JAVASCRIPT -->
+
 <script>
+
 let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+
+const slides =
+  document.querySelectorAll(".slide");
+
+const dots =
+  document.querySelectorAll(".dot");
+
 
 function showSlide(index){
-  slides.forEach(slide => slide.classList.remove("active"));
-  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides.forEach(function(slide){
+
+    slide.classList.remove("active");
+
+  });
+
+
+  dots.forEach(function(dot){
+
+    dot.classList.remove("active");
+
+  });
+
 
   slides[index].classList.add("active");
+
   dots[index].classList.add("active");
+
 }
 
+
 function nextSlide(){
+
   slideIndex++;
 
   if(slideIndex >= slides.length){
+
     slideIndex = 0;
+
   }
 
   showSlide(slideIndex);
+
 }
+
 
 setInterval(nextSlide,4000);
 
-dots.forEach((dot,index)=>{
-  dot.addEventListener("click",()=>{
-    slideIndex=index;
+
+dots.forEach(function(dot,index){
+
+  dot.addEventListener("click",function(){
+
+    slideIndex = index;
+
     showSlide(slideIndex);
+
   });
+
 });
+
 </script>
 
 </body>
